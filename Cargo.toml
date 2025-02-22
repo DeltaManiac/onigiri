@@ -1,0 +1,32 @@
+[package]
+name = "onigiri"
+version = "0.1.0"
+edition = "2021"
+authors = ["Harikrishnan Menon <maxpaynered@gmail.com>"]
+description = "A SSH tunnel manager"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+tokio = { version = "1.43.0", features = ["full"] }
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.138"
+anyhow = "1.0.95"
+eframe = { version = "0.31.0", default-features = false, features = [
+    "default_fonts", 
+    "wgpu", 
+] }
+egui = "0.31.0"
+rusqlite = { version = "0.33.0", features = ["bundled"] }
+log = "0.4"
+pretty_env_logger = "0.5.0"
+image = "0.25.5"
+dirs = "6.0.0"
+ctrlc = "3.4.2"
+
+[package.metadata.bundle]
+name = "Onigiri"
+icon = ["resources/Onigiri.icns"]
+identifier = "com.deltamaniac.onigiri"
+resources = ["resources"]
+version = "0.1.0"
+osx_minimum_system_version = "10.15"
